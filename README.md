@@ -14,3 +14,14 @@ val bfparser = Factory.create(List("+"), List("-"), List(">"), List("<"), List("
 
 runtime.exec(bfparser.parse(hoge).get) // -> hoge
 ```
+
+Usage
+==============
+Add Dependency into your sbt setting
+```
+lazy val yourProject = Project(
+  ...
+).dependsOn(plg)
+
+lazy val plg = uri("git://github.com/krrrr38/ProgrammingLanguageGenerator.git")
+```
